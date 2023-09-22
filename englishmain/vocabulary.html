@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta HTTP-EQUIV="X-UA-Compatible" content="IE+edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet" href="../englishmain/styles.css">
+
+    </head>
+    <body>
+        <h3 class="heading">VIDEOS</h3>
+        <div class="container">
+            <div class="main-video">
+                <div class="video">
+                    <video src="../englishmain/ENG_VOCAB/1 Hour English Vocabulary Course_ Learn 250+ Important English Vocabulary Words (with Pictures).mp4" type="video/mp4" controls autoplay width="600" height="500"></video>
+                    <h3 class="title">INTRODUCTION</h3>
+                </div>
+            </div>
+            <div class="video-list">
+                <div class="vid">
+                    <video src="../englishmain/ENG_VOCAB/5 Easy Ways to Improve Your English Vocabulary!.mp4" type="video/mp4" muted ></video>
+                    <h3 class="title">Vocabulary</h3>
+                </div>
+                <div class="vid">
+                    <video src="../englishmain/ENG_VOCAB/English Vocabulary - 100 HOUSEHOLD ITEMS.mp4" type="video/mp4" muted></video>
+                    <h3 class="title">Easy Ways to Improve Your English Vocabulary</h3>
+                </div>
+                <div class="vid">
+                    <video src="../englishmain/ENG_VOCAB/Learn English Tenses in 10 minutes - with Examples, Worksheet and PDF Study material.mp4" type="video/mp4" muted></video>
+                    <h3 class="title">Daily use english words</h3>
+                </div>
+                <div class="vid">
+                    <video src="../englishmain/ENG_VOCAB/Vocabulary_ Daily use english words _ Vocabulary with pictures _ listen and practice.mp4" muted></video>
+                    <h3 class="title">English Vocabulary</h3>
+                </div>
+                <div class="vid">
+                    <video src="../englishmain/ENG_VOCAB/1 Hour English Vocabulary Course_ Learn 250+ Important English Vocabulary Words (with Pictures).mp4" muted></video>
+                    <h3 class="title">Important English Vocabulary Words </h3>
+                </div>
+                <div class="vid">
+                    <video src="../englishmain/ENG_VOCAB/5 Easy Ways to Improve Your English Vocabulary!.mp4" muted></video>
+                    <h3 class="title">Important English Vocabulary Words </h3>
+                </div>
+                <div class="vid">
+                    <video src="../englishmain/ENG_VOCAB/Learn English Tenses in 10 minutes - with Examples, Worksheet and PDF Study material.mp4" muted></video>
+                    <h3 class="title">Important English Vocabulary Words </h3>
+                </div>
+                <div class="vid">
+                    <video src="../englishmain/ENG_VOCAB/Learn English Tenses in 10 minutes - with Examples, Worksheet and PDF Study material.mp4" muted></video>
+                    <h3 class="title">Important English Vocabulary Words </h3>
+                </div>
+            </div>
+        </div>
+        <script>
+    // Select the video elements and the main video player
+    let listVideos = document.querySelectorAll('.vid video');
+    let mainVideo = document.querySelector('.main-video video');
+    let title = document.querySelector('.heading');
+
+    listVideos.forEach(video => {
+        video.onclick = () => {
+            // Play the clicked video
+            video.play();
+
+            // Pause all other videos
+            listVideos.forEach(vid => {
+                if (vid !== video) {
+                    vid.pause();
+                }
+            });
+
+            // Remove the 'active' class from all videos' containers
+            listVideos.forEach(vid => vid.parentElement.classList.remove('active'));
+            
+            // Add the 'active' class to the clicked video's container
+            video.parentElement.classList.add('active');
+
+            // Update the main video source and title
+            let src = video.getAttribute('src');
+            mainVideo.src = src;
+            let text = video.nextElementSibling.innerHTML;
+            title.innerHTML = text;
+        };
+    });
+</script>
+
+
+    </body>
+</html>
