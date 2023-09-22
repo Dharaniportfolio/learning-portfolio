@@ -1,0 +1,58 @@
+/* styles.css */
+@media(min-width:319px ) and(max-width:480px){
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(./Artificial\ intelligence\ \(AI\).jpeg);
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+}
+header{
+    margin: 0;
+    color:white;
+}
+span{
+    color:white;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+    padding: 150px;
+}
+
+.option {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 50px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.option h2 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.option p {
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.option a {
+    display: inline-block;
+    background-color: #0073e6;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.option a:hover {
+    background-color: #005bb8;
+}
+
